@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOTEL</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/a986bc5ff3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+  </head>
+  <body>
+    <header class="header">
+      <!--para la barra de navegacion-->
+      <nav class="navbar">
+        <label for=" " class="icono">
+          <div class="texto-icono">HCS</div>
+        </label>
+        <ul class="menu">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#listado">Listado de Habitaciones </a></li>
+          <li>
+            <a href="#formulario-habitaciones">Gestión de Habitaciones</a>
+          </li>
+          <li><a href="#trabajadores">Listado de trabajadores</a></li>
+          <li><a href="#formulario-trabajadores">Gestión de trabajadores</a></li>
+        </ul>
+      </nav>
+      <div class="scrol"></div>
+      <!-- para la imagen principal de la pagina-->
+      <div id="destacada">
+        <div class="contenedor">
+          <div class="contenido">
+            <h1>HOTEL COSTA SOL</h1>
+            <p class="intro-principal">
+                Accede a todas las herramientas y recursos que necesitas para brindar 
+                el mejor servicio a nuestros huéspedes. Gestiona las habitaciones,
+                supervisa el personal y mantén todo en orden para una experiencia
+                hotelera excepcional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!--info del hotel-->
+
+      <div id="info" class="info_hotel">
+        <img src="fot_hotel.jpg" alt="Foto de hotel" id="foto_hotel" />
+        <p>
+          ¡Bienvenido al portal del Hotel Costa Sol! 
+          Aquí encontrarás herramientas y recursos diseñados para hacer
+          tu trabajo más eficiente y brindar una experiencia excepcional
+          a nuestros huéspedes. ¡Gracias por ser parte de nuestro equipo y
+          por contribuir a hacer que cada estadía sea inolvidable
+          para nuestros huéspedes!
+        </p>
+      </div>
+      <section id="listado">
+        <h2>Listado de Habitaciones</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Tipo</th>
+              <th>Precio</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="lista-habitaciones">
+            <!-- Filas de habitaciones se insertarán aquí mediante JavaScript -->
+          </tbody>
+        </table>
+      </section>
+      <section id="formulario-habitaciones">
+        <div class="contenedor-formulario">
+          <h2>Agregar/Editar Habitación</h2>
+          <form>
+            <label for="numero-habitacion">Número:</label>
+            <input
+              type="text"
+              id="numero-habitacion"
+              name="numero-habitacion"
+              required
+            />
+            <label for="tipo-habitacion">Tipo:</label>
+            <input
+              type="text"
+              id="tipo-habitacion"
+              name="tipo-habitacion"
+              required
+            />
+            <label for="precio-habitacion">Precio $:</label>
+            <input
+              type="number"
+              id="precio-habitacion"
+              name="precio-habitacion"
+              required
+            />
+            <label for="estado-habitacion">Estado:</label>
+            <select id="estado-habitacion" name="estado-habitacion" required>
+              <option value="Disponible">Disponible</option>
+              <option value="Ocupadas">Ocupada</option>
+              <option value="Mantenimiento">Mantenimiento</option>
+            </select>
+            <button type="submit">Guardar</button>
+          </form>
+        </div>
+      </section>
+      <section id="trabajadores">
+        <h2>Listado de Trabajadores</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Cargo</th>
+              <th>Horario de Ingreso</th>
+              <th>Horario de Egreso</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="lista-trabajadores">
+            <!-- Filas de trabajadores se insertarán aquí mediante JavaScript -->
+          </tbody>
+        </table>
+      </section>
+      <section id="formulario-trabajadores">
+        <div class="contenedor-formulario">
+          <h2>Agregar/Editar Trabajador</h2>
+          <form>
+            <label for="id-trabajador">ID:</label>
+            <input
+              type="text"
+              id="id-trabajador"
+              name="id-trabajador"
+              required
+            />
+            <label for="nombre-trabajador">Nombre:</label>
+            <input
+              type="text"
+              id="nombre-trabajador"
+              name="nombre-trabajador"
+              required
+            />
+            <label for="cargo-trabajador">Cargo:</label>
+            <input
+              type="text"
+              id="cargo-trabajador"
+              name="cargo-trabajador"
+              required
+            />
+            <label for="ingreso-trabajador">Horario de Ingreso:</label>
+            <input
+              type="time"
+              id="ingreso-trabajador"
+              name="ingreso-trabajador"
+              required
+            />
+            <label for="egreso-trabajador">Horario de Egreso:</label>
+            <input
+              type="time"
+              id="egreso-trabajador"
+              name="egreso-trabajador"
+              required
+            />
+            <button type="submit">Guardar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a href="#">
+              <img src="logo_h.jpg" alt="foto" />
+            </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h2>Sobre nosotros</h2>
+          <p>
+            Nos enorgullece ofrecerte una experiencia excepcional,
+            donde cada detalle está cuidadosamente diseñado para tu disfrute.
+          </p>
+        </div>
+        <div class="box">
+          <h2>CONTACTANOS</h2>
+          <div class="red-social">
+            <a href="#" class="fa fa-envelope"></a>
+            <a
+              href="https://www.instagram.com/ori_palmero?igsh=N2N3MnV3cmg5bXhp"
+              class="fa fa-instagram"
+            ></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-2">
+        <small>&copy;2024 <b>Ori Palm</b>-Todos los Derechos Reservados</small>
+      </div>
+    </footer>
+  </body>
+</html>

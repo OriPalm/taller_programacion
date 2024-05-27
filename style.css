@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  
+}
+body {
+  background: url('fondo_pagina.jpg');
+}
+header {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.texto-icono {
+  display: block; 
+  width: 100%;
+  text-align: center; 
+  font-family: "Pacifico", cursive;
+  color: black;
+  font-size: 35px;
+}
+
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: chocolate;
+}
+
+.container {
+  width: 80%;
+  height: 50vh;
+  background-color: violet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-content {
+  width: 100%;
+  max-width: 450px;
+  background-color: aqua;
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 25px;
+}
+.form-content h1 {
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #ffffff;
+  position: relative;
+}
+.form-content h1::after {
+  content: "";
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #04bd7d;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  transition: background-color 0.5s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+.navbar.active {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.texto {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+.intro-principal {
+  font-size: 20px;
+  font-weight: 200;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  position: relative;
+}
+.menu {
+  display: flex;
+}
+.menu li {
+  list-style: none;
+  margin: 10px;
+}
+.menu li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+.menu li a:hover {
+  padding: 5px 10px;
+  background: black;
+  color: #fff;
+  border-radius: 15px;
+  transform: translateY(-3px);
+}
+.scrol {
+  height: 100px;
+}
+#destacada {
+  background: url("foto_principal.jpg") no-repeat center center/cover;
+  height: 600px;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#destacada .contenido {
+  color: #fff;
+  text-align: center;
+  padding-top: 170px;
+}
+#destacada .contenido h1 {
+  font-size: 60px;
+  line-height: 1.2em;
+}
+#destacada .contenido p {
+  padding-bottom: 20px;
+  line-height: 1.7em;
+}
+
+#foto_hotel {
+  width: 500px;
+  height: auto;
+  display: inline-block;
+  margin-right: 20px;
+}
+#info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 100px;
+  background-color:lightgoldenrodyellow;
+  padding: 10px;
+  border-radius: 8px;
+}
+#info p {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 25px;
+}
+#individual {
+  width: 500px;
+  height: auto;
+}
+#listado {
+  margin: 50px auto;
+  max-width: 800px;
+}
+#listado table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+#listado th,
+#listado td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-weight: bold;
+}
+#listado th {
+  background-color:lightsalmon;
+  color:black;
+  font-family: "Open Sans", sans-serif;
+}
+
+#listado td.actions {
+  display: flex;
+  justify-content: center;
+}
+#listado button {
+  background-color: #4caf50;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#listado button:hover {
+  background-color:white;
+}
+.contenedor-formulario {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color:lightsalmon;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#formulario.habitaciones {
+  text-align: center;
+}
+#formulario-habitaciones h2 {
+  margin-bottom: 20px;
+}
+
+#formulario-habitaciones form {
+  display: flex;
+  flex-direction: column;
+}
+
+#formulario-habitaciones label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+#formulario-habitaciones input[type="text"],
+#formulario-habitaciones input[type="number"],
+#formulario-habitaciones select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#formulario-habitaciones select {
+  width: 100%;
+}
+
+#formulario-habitaciones button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#formulario-habitaciones button[type="submit"]:hover {
+  background-color: #45a049;
+}
+.pie-pagina {
+  width: 100%;
+  background-color: #333;
+}
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img {
+  width: 250px;
+  margin-left: -20px;
+  border-radius:10px;
+
+}
+.pie-pagina .grupo-1 .box h2 {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover {
+  color:lightgreen;
+}
+.pie-pagina .grupo-2 {
+  background-color:#333;
+  padding: 15px 10px;
+  text-align: center;
+  color: white;
+}
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+@media screen and(max-width:800px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+#trabajadores {
+  margin: 50px auto;
+  max-width: 800px;
+}
+#trabajadores table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+#trabajadores th,
+#trabajadores td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-weight: bold;
+}
+
+#trabajadores th {
+  background-color:lightsalmon;
+  color:black;
+}
+#trabajadores td.actions {
+  display: flex;
+  justify-content: center;
+}
+#trabajadores button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+#trabajadores button:hover {
+  background-color: black;
+}
+#formulario-trabajadores {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#formulario-trabajadores h2 {
+  margin-bottom: 20px;
+}
+
+#formulario-trabajadores form {
+  display: flex;
+  flex-direction: column;
+}
+
+#formulario-trabajadores label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#formulario-trabajadores input[type="text"],
+#formulario-trabajadores input[type="number"],
+#formulario-trabajadores input[type="time"],
+#formulario-trabajadores select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#formulario-trabajadores select {
+  width: 100%;
+}
+
+#formulario-trabajadores button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#formulario-trabajadores button[type="submit"]:hover {
+  background-color: #45a049;
+}
