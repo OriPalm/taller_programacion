@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', function() {
         navbar.classList.toggle('active', window.scrollY > 0);
     });
+    
     const scrollRevealOptions = {
         distance: '50px',
         origin: 'bottom',
         duration: 1000
     };
     ScrollReveal().reveal('.navbar', scrollRevealOptions);
-    
 
     const listahabitaciones = document.getElementById("lista-habitaciones");
     const formulariohabitaciones = document.getElementById("formulario-habitaciones");
